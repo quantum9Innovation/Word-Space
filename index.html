@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Word Space</title>
+    <style>
+    body{
+      background-image: url("https://cdn3.iconfinder.com/data/icons/iconano-random-stuff/512/126-More-512.png");
+    }
+    textarea {
+      width: 45%;
+      height: 775px;
+      resize: none;
+      margin-left: 462px;
+      font-family: Poppins;
+    }
+    #font{
+      float: left;
+    }
+    #style{
+      height: 20px;
+    }
+    #styleButton{
+      float: right, 5px;
+    }
+    </style>
+  </head>
+  <body>
+    <textarea  id="doc" placeholder="Write something great..."></textarea>
+    <textarea id="style" placeholder="styleProperty.value"></textarea>
+    <button type="button" id="styleButton">select</button>
+    <div class="d">
+
+    </div>
+  </body>
+  <script>
+  var style = function () {
+    var a = document.getElementById("styleButton");
+    var styleFunc = function () {
+      var style = document.getElementById("style").value;
+      var doc = document.getElementById("doc");
+
+      var a = style.split(".");
+      console.log(a[0])
+      doc.style[a[0]] = [a[1]];
+    };
+    a.addEventListener("click",styleFunc);
+  }
+  style();
+  </script>
+</html>
