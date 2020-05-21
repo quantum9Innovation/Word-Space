@@ -33,14 +33,10 @@
       height: 20px;
       margin-bottom: auto;
       margin-top: auto;
-      width: 80vh;
+      width: 45vw;
       resize: none;
       margin-left: 27.5vw;
       font-family: Poppins;
-      
-    }
-    #styleButton{
-      float: right, 5px;
     }
     </style>
   </head>
@@ -48,14 +44,9 @@
     <textarea id="header" placeholder="Title"></textarea>
     <textarea  id="doc" placeholder="Write something great..."></textarea>
     <textarea id="style" placeholder="styleProperty.value"></textarea>
-    <button type="button" id="styleButton">select</button>
-    <div class="d">
-
-    </div>
   </body>
   <script>
-  var style = function () {
-    var a = document.getElementById("styleButton");
+    var a = document.getElementById("style");
     var styleFunc = function () {
       var style = document.getElementById("style").value;
       var doc = document.getElementById("doc");
@@ -64,8 +55,7 @@
       console.log(a[0])
       doc.style[a[0]] = [a[1]];
     };
-    a.addEventListener("click",styleFunc);
-  }
-  style();
+    a.addEventListener("change",styleFunc);
+
   </script>
 </html>
